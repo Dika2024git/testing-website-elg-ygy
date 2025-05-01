@@ -1,0 +1,28 @@
+{
+  "name": "tes-dulu-ygy-ai-chatbot",
+  "version": "1.0.0",
+  "description": "Proyek chatbot AI dengan Node.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": ["chatbot", "ai", "nodejs", "express"],
+  "author": "Tes Dulu ygy",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "fuse.js": "^6.6.2",
+    "util": "^0.12.5",
+    "moment-timezone": "^0.5.34",
+    "mongoose": "^6.2.1",
+    "cheerio": "^1.0.0-rc.10",
+    "child_process": "^1.0.2",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}

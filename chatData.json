@@ -1,0 +1,113 @@
+[
+  {
+    "id": "responKabarBaikSpesifik",
+    "priority": 15, // Prioritas tinggi karena lebih spesifik
+    "keywords": ["baik sekali", "sangat baik", "luar biasa baik", "sehat banget"],
+    "requiredContext": "menanyakanKabarBalik",
+    "answers": [
+      "Wah, bagus sekali mendengarnya! Tetap semangat ya!",
+      "Luar biasa! Semoga terus positif dan produktif.",
+      "Mantap jiwa! Senang sekali dengernya."
+    ],
+    "clearContext": true
+  },
+  {
+    "id": "responKabarBaik",
+    "priority": 10, // Prioritas standar untuk kabar baik
+    "keywords": ["baik", "sehat", "bagus", "lumayan", "oke"],
+    "requiredContext": "menanyakanKabarBalik",
+    "answers": [
+      "Syukurlah kalau begitu! Senang mendengarnya.",
+      "Baguslah! Jaga terus kesehatannya ya.",
+      "Oke, sip! Semoga harimu lancar."
+    ],
+    "clearContext": true
+  },
+  {
+    "id": "responKabarBuruk",
+    "priority": 10, // Prioritas standar
+    "keywords": ["kurang baik", "tidak sehat", "sakit", "lagi ga enak badan", "buruk", "kurang bagus"],
+    "requiredContext": "menanyakanKabarBalik",
+    "answers": [
+      "Oh, semoga lekas membaik ya. Jangan lupa istirahat.",
+      "Yah, semoga tidak serius dan cepat pulih.",
+      "Tetap semangat ya! Semoga segera fit kembali."
+    ],
+    "clearContext": true
+  },
+   {
+    "id": "kabar",
+    "priority": 5, // Prioritas lebih rendah dari respons kabar
+    "keywords": ["apa kabar", "gimana kabarnya", "kabar", "sehat?"], // Tambah '?' untuk contoh
+    "answers": [
+      "Kabar saya selalu prima dan siap membantu! Kalau kamu bagaimana?",
+      "Saya baik-baik saja, terima kasih sudah bertanya. Bagaimana denganmu?",
+      "Luar biasa! Selalu bersemangat. Kamu sendiri apa kabar?"
+    ],
+    "setContext": "menanyakanKabarBalik"
+  },
+  {
+    "id": "sapaanWaktuSpesifik",
+    "priority": 8, // Lebih tinggi dari sapaan umum
+    "keywords": ["selamat pagi", "selamat siang", "selamat sore", "selamat malam"],
+    "answers": [], // Akan diisi oleh dynamic answer
+    "dynamicAnswer": "sapaanWaktuAkurat"
+  },
+  {
+    "id": "sapaanUmum",
+    "priority": 5, // Prioritas standar
+    "keywords": ["halo", "hai", "hi", "hei", "pagi", "siang", "sore", "malam", "yo", "bro"],
+    "answers": [
+      "Halo juga! Ada yang bisa saya bantu hari ini?",
+      "Hai! Semoga harimu menyenangkan.",
+      "Yo! Ada perlu apa nih?"
+    ],
+    "dynamicAnswer": "sapaanWaktuUmum" // Fungsi dynamic berbeda
+  },
+  {
+    "id": "terimaKasih",
+    "priority": 5,
+    "keywords": ["terima kasih", "makasih", "thanks", "nuwun", "hatur nuhun"],
+    "answers": [
+      "Sama-sama! Senang bisa membantu.",
+      "Dengan senang hati!",
+      "Siap! Ada lagi yang bisa dibantu?"
+    ]
+  },
+  {
+     "id": "tentangBot",
+     "priority": 5,
+     "keywords": ["kamu siapa", "ini siapa", "bot apa ini", "siapa kamu"],
+     "answers": [
+         "Saya adalah chatbot sederhana yang dikembangkan lebih lanjut dengan Express.js dan Fuse.js.",
+         "Perkenalkan, saya program chatbot internal versi 2.0.",
+         "Saya adalah AI percakapan berbasis aturan yang dirancang untuk menjawab pertanyaan berdasarkan kata kunci prioritas."
+     ]
+  },
+  {
+    "id": "bantuan",
+    "priority": 5,
+    "keywords": ["bisa bantu apa", "bantuan", "help", "tolong", "fitur", "command", "perintah"],
+    "answers": [
+      "Anda bisa menyapa saya ('halo', 'selamat pagi'), bertanya kabar ('apa kabar'), atau bertanya 'siapa kamu'. Saya juga bisa mendeteksi sedikit typo. Coba saja!",
+      "Saya merespon kata kunci seperti 'halo', 'apa kabar', 'terima kasih', 'siapa kamu'. Saya akan coba memahami jika ada sedikit salah ketik. Ada juga prioritas respon, lho."
+    ]
+  },
+  {
+    "id": "fallback",
+    "priority": 0, // Prioritas terendah, hanya jika tidak ada yg cocok
+    "keywords": [], // Tidak ada keyword spesifik, ini fallback
+    "answers": [
+      "Maaf, saya masih belum mengerti maksud Anda.",
+      "Hmm, sepertinya saya belum diprogram untuk itu.",
+      "Saya tidak yakin bagaimana meresponnya."
+    ],
+    "dynamicAnswer": "fallbackDenganSaran" // Fungsi untuk menambah saran
+  },
+  {
+    "id": "suggestions", // Data untuk saran saat fallback
+    "priority": -1, // Tidak untuk dicocokkan langsung
+    "keywords": ["saran_kata_kunci"], // Keyword internal
+    "data": ["apa kabar", "siapa kamu", "terima kasih", "halo", "bantuan"]
+  }
+]
