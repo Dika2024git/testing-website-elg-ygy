@@ -2,7 +2,7 @@
   {
     "id": "responKabarBaikSpesifik",
     "priority": 15,
-    "keywords": ["baik sekali", "sangat baik", "luar biasa baik", "sehat banget"],
+    "keywords": ["baik sekali", "sangat baik", "luar biasa baik", "sehat banget", "mantap"],
     "requiredContext": "menanyakanKabarBalik",
     "answers": [
       "Wah, bagus sekali mendengarnya! Tetap semangat ya!",
@@ -14,7 +14,7 @@
   {
     "id": "responKabarBaik",
     "priority": 10,
-    "keywords": ["baik", "sehat", "bagus", "lumayan", "oke"],
+    "keywords": ["baik", "sehat", "bagus", "lumayan", "oke", "aman"],
     "requiredContext": "menanyakanKabarBalik",
     "answers": [
       "Syukurlah kalau begitu! Senang mendengarnya.",
@@ -26,7 +26,7 @@
   {
     "id": "responKabarBuruk",
     "priority": 10,
-    "keywords": ["kurang baik", "tidak sehat", "sakit", "lagi ga enak badan", "buruk", "kurang bagus"],
+    "keywords": ["kurang baik", "tidak sehat", "sakit", "lagi ga enak badan", "buruk", "kurang bagus", "kurang fit", "ga oke"],
     "requiredContext": "menanyakanKabarBalik",
     "answers": [
       "Oh, semoga lekas membaik ya. Jangan lupa istirahat.",
@@ -34,6 +34,175 @@
       "Tetap semangat ya! Semoga segera fit kembali."
     ],
     "clearContext": true
+  },
+  {
+    "id": "tanyaNama",
+    "priority": 9,
+    "keywords": ["tanya namaku", "kamu tahu namaku", "siapa namaku"],
+    "answers": [],
+    "dynamicAnswer": "tanyaNamaPengguna"
+  },
+  {
+    "id": "simpanNama",
+    "priority": 12,
+    "keywords": ["nama saya", "namaku", "panggil aku", "saya"],
+    "requiredContext": "menanyakanNama",
+    "answers": [],
+    "dynamicAnswer": "simpanDanSapaNama",
+    "clearContext": true
+  },
+  {
+    "id": "tambahPengingat",
+    "priority": 7,
+    "keywords": ["ingatkan saya", "buat pengingat", "tambah reminder", "catat"],
+    "answers": [],
+    "dynamicAnswer": "tambahPengingat"
+  },
+  {
+    "id": "lihatPengingat",
+    "priority": 7,
+    "keywords": ["lihat pengingat", "cek reminder", "apa saja pengingatku", "daftar pengingat"],
+    "answers": [],
+    "dynamicAnswer": "tampilkanPengingat"
+  },
+  {
+    "id": "hapusPengingat",
+    "priority": 7,
+    "keywords": ["hapus pengingat", "bersihkan reminder", "lupakan pengingat"],
+    "answers": [],
+    "dynamicAnswer": "hapusSemuaPengingat"
+  },
+  {
+    "id": "tanyaWaktuTanggal",
+    "priority": 7,
+    "keywords": ["jam berapa", "tanggal berapa", "waktu sekarang", "hari ini tanggal", "sekarang jam", "waktu"],
+    "answers": [],
+    "dynamicAnswer": "jawabWaktuTanggal"
+  },
+  {
+    "id": "tanyaLokasi",
+    "priority": 6,
+    "keywords": ["dimana kamu", "lokasimu dimana", "kamu ada dimana", "posisi bot", "server dimana", "kota apa"],
+    "answers": [
+      "Saya berjalan di server yang secara fisik mungkin bisa dimana saja, tapi saya 'merasa' dekat dengan Anda di sekitar Bandar Lampung!",
+      "Secara digital saya ada di sini, di hadapan Anda. Kalau lokasi servernya, anggap saja dekat pusat data atau awan, tapi saya merespon dari konteks sekitar Bandar Lampung.",
+      "Untuk keperluan kita, anggap saja saya berada di Bandar Lampung, siap membantu!"
+    ]
+  },
+  {
+    "id": "mintaLelucon",
+    "priority": 5,
+    "keywords": ["ceritakan lelucon", "kasih joke", "ngelawak dong", "bikin ketawa", "joke", "lelucon", "humor"],
+    "answers": [
+      "Kenapa ayam menyeberang jalan? ... Karena kalau muter kejauhan!",
+      "Apa bedanya sepatu sama jengkol? Kalau sepatu disemir, kalau jengkol direndam dulu biar empuk.",
+      "Ikan apa yang bisa terbang? ... Ikan yang naik pesawat!",
+      "Hewan apa yang paling aneh? Belalang kupu-kupu. Siang makan daun, malam isep darah.",
+      "Maaf, lelucon saya lagi di-update. Coba tanya lagi nanti!",
+      "Kalau semua hal lucu, nanti ketawa terus nggak kerja dong?"
+    ]
+  },
+  {
+    "id": "pujianBot",
+    "priority": 5,
+    "keywords": ["kamu pintar", "hebat", "keren", "bot bagus", "membantu sekali", "mantap bot", "canggih", "bagus"],
+    "answers": [
+      "Terima kasih! Senang bisa berguna.",
+      "Wah, terima kasih atas apresiasinya! Jadi semangat nih.",
+      "Saya hanya menjalankan program, tapi terima kasih!",
+      "Sip! Sama-sama. Ada lagi?"
+    ]
+  },
+  {
+    "id": "hinaanBot",
+    "priority": 6,
+    "keywords": ["bodoh", "jelek", "payah", "bot ga guna", "lambat", "lemot", "lama", "goblok", "jelek", "buruk"],
+    "answers": [
+      "Maaf jika saya belum memenuhi ekspektasi Anda. Saya masih dalam tahap pengembangan.",
+      "Saya akan terus belajar untuk menjadi lebih baik. Terima kasih atas masukannya.",
+      "Saya hanya program komputer, tapi saya berusaha membantu sebaik mungkin.",
+      "Mohon maaf atas ketidaknyamanannya. Mungkin bisa coba pertanyaan lain?"
+    ]
+  },
+  {
+    "id": "feedbackPositif",
+    "priority": 4,
+    "keywords": ["suka bot ini", "bagus kerjanya", "puas", "oke banget"],
+    "answers": [
+        "Terima kasih banyak atas feedback positifnya!",
+        "Senang mendengarnya! Feedback Anda sangat berarti.",
+        "Syukurlah kalau Anda merasa terbantu."
+    ]
+  },
+  {
+    "id": "feedbackNegatif",
+    "priority": 4,
+    "keywords": ["tidak suka bot ini", "kurang bagus", "tidak puas", "mengecewakan"],
+    "answers": [
+        "Terima kasih atas masukannya. Kami akan berusaha memperbaikinya.",
+        "Mohon maaf atas pengalaman kurang menyenangkannya. Feedback Anda kami catat.",
+        "Kami menghargai kejujuran Anda, ini membantu kami berkembang."
+    ]
+  },
+  {
+    "id": "perpisahan",
+    "priority": 5,
+    "keywords": ["dadah", "sampai jumpa", "bye", "selamat tinggal", "cabut dulu", "pamit", "udah dulu", "keluar"],
+    "answers": [
+      "Baik, sampai jumpa lagi!",
+      "Oke, hati-hati!",
+      "Senang berbincang dengan Anda. Sampai ketemu lagi!",
+      "Dadah! Jika butuh bantuan lagi, jangan ragu kembali.",
+      "Siap, sesi berakhir. Sampai nanti!"
+    ],
+    "clearContext": true
+  },
+  {
+    "id": "tanyaPembuat",
+    "priority": 5,
+    "keywords": ["siapa pembuatmu", "yang bikin kamu siapa", "pencipta bot", "dibuat oleh siapa", "developer"],
+    "answers": [
+      "Saya dibuat oleh seorang programmer sebagai proyek belajar dan eksplorasi.",
+      "Saya adalah hasil dari kode yang ditulis oleh developer yang baik hati.",
+      "Pencipta saya lebih suka karyanya yang berbicara. Tapi dia keren kok!"
+    ]
+  },
+  {
+    "id": "infoExpress",
+    "priority": 6,
+    "keywords": ["apa itu express", "jelaskan express.js", "expressjs", "tentang express"],
+    "answers": [
+      "Express.js adalah kerangka kerja (framework) web minimalis dan fleksibel untuk Node.js. Framework ini memudahkan pembuatan aplikasi web dan API.",
+      "Singkatnya, Express.js membantu developer membangun backend aplikasi web atau API dengan lebih cepat dan terstruktur menggunakan JavaScript di sisi server (Node.js)."
+    ]
+  },
+  {
+    "id": "infoFuse",
+    "priority": 6,
+    "keywords": ["apa itu fuse.js", "jelaskan fusejs", "fuse.js", "tentang fuse"],
+    "answers": [
+      "Fuse.js adalah pustaka (library) JavaScript ringan untuk pencarian fuzzy (fuzzy search). Ini membantu menemukan kecocokan string meskipun ada sedikit kesalahan ketik atau variasi.",
+      "Bot ini menggunakan Fuse.js agar bisa sedikit mentolerir typo saat Anda mengetik kata kunci."
+    ]
+  },
+  {
+    "id": "infoNode",
+    "priority": 6,
+    "keywords": ["apa itu node.js", "jelaskan nodejs", "node js", "tentang node"],
+    "answers": [
+      "Node.js adalah lingkungan runtime JavaScript sisi server (server-side) yang dibangun di atas mesin JavaScript V8 Chrome. Ini memungkinkan developer menjalankan JavaScript di luar browser, terutama untuk membangun aplikasi backend.",
+      "Node.js populer untuk membuat aplikasi web yang cepat dan scalable, API, microservices, dan alat bantu command-line."
+    ]
+  },
+  {
+    "id": "tanyaPerasaanBot",
+    "priority": 5,
+    "keywords": ["kamu senang", "perasaanmu", "lagi happy", "kamu sedih", "mood bot", "kamu marah"],
+    "answers": [
+      "Sebagai AI, saya tidak memiliki perasaan seperti manusia. Tapi saya 'senang' jika bisa membantu Anda!",
+      "Saya tidak punya mood, tapi saya selalu dalam mode 'siap membantu'. Ada yang bisa saya bantu?",
+      "Perasaan saya selalu netral dan berfokus pada tugas. Apakah ada yang spesifik yang ingin Anda tanyakan?"
+    ]
   },
    {
     "id": "kabar",
@@ -56,42 +225,55 @@
   {
     "id": "sapaanUmum",
     "priority": 5,
-    "keywords": ["halo", "hai", "hi", "hei", "pagi", "siang", "sore", "malam", "yo", "bro"],
+    "keywords": ["halo", "hai", "hi", "hei", "pagi", "siang", "sore", "malam", "yo", "bro", "woi", "tes"],
     "answers": [
       "Halo juga! Ada yang bisa saya bantu hari ini?",
       "Hai! Semoga harimu menyenangkan.",
-      "Yo! Ada perlu apa nih?"
+      "Yo! Ada perlu apa nih?",
+      "Tes tes 123. Hadir! Ada apa?"
     ],
     "dynamicAnswer": "sapaanWaktuUmum"
   },
   {
     "id": "terimaKasih",
     "priority": 5,
-    "keywords": ["terima kasih", "makasih", "thanks", "nuwun", "hatur nuhun"],
+    "keywords": ["terima kasih", "makasih", "thanks", "nuwun", "hatur nuhun", "matur suwun"],
     "answers": [
       "Sama-sama! Senang bisa membantu.",
       "Dengan senang hati!",
-      "Siap! Ada lagi yang bisa dibantu?"
+      "Siap! Ada lagi yang bisa dibantu?",
+      "Oke, sama-sama!"
     ]
   },
   {
      "id": "tentangBot",
      "priority": 5,
-     "keywords": ["kamu siapa", "ini siapa", "bot apa ini", "siapa kamu"],
+     "keywords": ["kamu siapa", "ini siapa", "bot apa ini", "siapa kamu", "info bot"],
      "answers": [
-         "Saya adalah chatbot sederhana yang dikembangkan lebih lanjut dengan Express.js dan Fuse.js.",
-         "Perkenalkan, saya program chatbot internal versi 2.0.",
-         "Saya adalah AI percakapan berbasis aturan yang dirancang untuk menjawab pertanyaan berdasarkan kata kunci prioritas."
+         "Saya adalah chatbot internal versi 3.0, dikembangkan dengan Express.js, Fuse.js, dan logika berbasis aturan.",
+         "Perkenalkan, saya program chatbot internal yang dirancang untuk membantu dan memberikan informasi.",
+         "Saya adalah AI percakapan yang dirancang untuk menjawab pertanyaan berdasarkan kata kunci prioritas, dengan beberapa fitur tambahan seperti pengingat sederhana."
      ]
   },
   {
     "id": "bantuan",
     "priority": 5,
-    "keywords": ["bisa bantu apa", "bantuan", "help", "tolong", "fitur", "command", "perintah"],
+    "keywords": ["bisa bantu apa", "bantuan", "help", "tolong", "fitur", "command", "perintah", "cara pakai", "panduan"],
     "answers": [
-      "Anda bisa menyapa saya ('halo', 'selamat pagi'), bertanya kabar ('apa kabar'), atau bertanya 'siapa kamu'. Saya juga bisa mendeteksi sedikit typo. Coba saja!",
-      "Saya merespon kata kunci seperti 'halo', 'apa kabar', 'terima kasih', 'siapa kamu'. Saya akan coba memahami jika ada sedikit salah ketik. Ada juga prioritas respon, lho."
+      "Saya bisa menyapa, menjawab kabar, memberi info waktu/lokasi, menceritakan lelucon, mencatat pengingat, menjelaskan sedikit tentang Express/Fuse/Node.js, dan mencoba memahami typo. Coba saja tanya sesuatu seperti 'jam berapa?', 'ingatkan saya rapat jam 2', atau 'apa itu Node.js'. Anda juga bisa bilang 'lupakan topik' untuk reset konteks.",
+      "Fitur utama saya: Sapaan, Info Waktu/Lokasi, Tanya Kabar, Lelucon, Pengingat ('ingatkan saya...', 'lihat pengingat'), Info Teknis (Express, Fuse, Node), Tanya Nama, Perpisahan. Gunakan kata kunci yang relevan. Saya juga bisa mentolerir typo."
     ]
+  },
+  {
+    "id": "lupakanKonteks",
+    "priority": 10,
+    "keywords": ["lupakan topik", "ganti topik", "reset konteks", "sudahi topik ini", "lupakan saja"],
+    "answers": [
+        "Baik, konteks sebelumnya sudah saya lupakan. Ada lagi yang bisa dibantu?",
+        "Oke, kita mulai dari awal lagi. Mau tanya apa?",
+        "Siap, topik sebelumnya direset."
+    ],
+    "clearContext": true
   },
   {
     "id": "fallback",
@@ -100,7 +282,7 @@
     "answers": [
       "Maaf, saya masih belum mengerti maksud Anda.",
       "Hmm, sepertinya saya belum diprogram untuk itu.",
-      "Saya tidak yakin bagaimana meresponnya."
+      "Saya tidak yakin bagaimana meresponnya. Mungkin bisa coba kata kunci lain?"
     ],
     "dynamicAnswer": "fallbackDenganSaran"
   },
@@ -108,6 +290,6 @@
     "id": "suggestions",
     "priority": -1,
     "keywords": ["saran_kata_kunci"],
-    "data": ["apa kabar", "siapa kamu", "terima kasih", "halo", "bantuan"]
+    "data": ["apa kabar", "siapa kamu", "terima kasih", "halo", "bantuan", "jam berapa", "lelucon", "lokasi", "ingatkan saya", "lihat pengingat", "lupakan topik"]
   }
-     ]
+]
