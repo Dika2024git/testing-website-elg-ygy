@@ -1,7 +1,7 @@
 [
   {
     "id": "responKabarBaikSpesifik",
-    "priority": 15, // Prioritas tinggi karena lebih spesifik
+    "priority": 15,
     "keywords": ["baik sekali", "sangat baik", "luar biasa baik", "sehat banget"],
     "requiredContext": "menanyakanKabarBalik",
     "answers": [
@@ -13,7 +13,7 @@
   },
   {
     "id": "responKabarBaik",
-    "priority": 10, // Prioritas standar untuk kabar baik
+    "priority": 10,
     "keywords": ["baik", "sehat", "bagus", "lumayan", "oke"],
     "requiredContext": "menanyakanKabarBalik",
     "answers": [
@@ -25,7 +25,7 @@
   },
   {
     "id": "responKabarBuruk",
-    "priority": 10, // Prioritas standar
+    "priority": 10,
     "keywords": ["kurang baik", "tidak sehat", "sakit", "lagi ga enak badan", "buruk", "kurang bagus"],
     "requiredContext": "menanyakanKabarBalik",
     "answers": [
@@ -37,8 +37,8 @@
   },
    {
     "id": "kabar",
-    "priority": 5, // Prioritas lebih rendah dari respons kabar
-    "keywords": ["apa kabar", "gimana kabarnya", "kabar", "sehat?"], // Tambah '?' untuk contoh
+    "priority": 5,
+    "keywords": ["apa kabar", "gimana kabarnya", "kabar", "sehat?"],
     "answers": [
       "Kabar saya selalu prima dan siap membantu! Kalau kamu bagaimana?",
       "Saya baik-baik saja, terima kasih sudah bertanya. Bagaimana denganmu?",
@@ -48,21 +48,21 @@
   },
   {
     "id": "sapaanWaktuSpesifik",
-    "priority": 8, // Lebih tinggi dari sapaan umum
+    "priority": 8,
     "keywords": ["selamat pagi", "selamat siang", "selamat sore", "selamat malam"],
-    "answers": [], // Akan diisi oleh dynamic answer
+    "answers": [],
     "dynamicAnswer": "sapaanWaktuAkurat"
   },
   {
     "id": "sapaanUmum",
-    "priority": 5, // Prioritas standar
+    "priority": 5,
     "keywords": ["halo", "hai", "hi", "hei", "pagi", "siang", "sore", "malam", "yo", "bro"],
     "answers": [
       "Halo juga! Ada yang bisa saya bantu hari ini?",
       "Hai! Semoga harimu menyenangkan.",
       "Yo! Ada perlu apa nih?"
     ],
-    "dynamicAnswer": "sapaanWaktuUmum" // Fungsi dynamic berbeda
+    "dynamicAnswer": "sapaanWaktuUmum"
   },
   {
     "id": "terimaKasih",
@@ -95,19 +95,19 @@
   },
   {
     "id": "fallback",
-    "priority": 0, // Prioritas terendah, hanya jika tidak ada yg cocok
-    "keywords": [], // Tidak ada keyword spesifik, ini fallback
+    "priority": 0,
+    "keywords": [],
     "answers": [
       "Maaf, saya masih belum mengerti maksud Anda.",
       "Hmm, sepertinya saya belum diprogram untuk itu.",
       "Saya tidak yakin bagaimana meresponnya."
     ],
-    "dynamicAnswer": "fallbackDenganSaran" // Fungsi untuk menambah saran
+    "dynamicAnswer": "fallbackDenganSaran"
   },
   {
-    "id": "suggestions", // Data untuk saran saat fallback
-    "priority": -1, // Tidak untuk dicocokkan langsung
-    "keywords": ["saran_kata_kunci"], // Keyword internal
+    "id": "suggestions",
+    "priority": -1,
+    "keywords": ["saran_kata_kunci"],
     "data": ["apa kabar", "siapa kamu", "terima kasih", "halo", "bantuan"]
   }
-]
+     ]
