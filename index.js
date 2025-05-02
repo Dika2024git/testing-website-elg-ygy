@@ -21,7 +21,6 @@ try {
 
 // Inisialisasi aplikasi Express
 const app = express();
-const port = process.env.PORT || 3000;
 
 // --- State Aplikasi (Simpan di memori - reset jika server restart) ---
 let currentContext = null;
@@ -608,3 +607,5 @@ app.use((err, req, res, next) => {
   console.error("============================================");
   res.status(500).json({ error: 'Terjadi kesalahan internal pada server.' });
 });
+
+module.exports = app;
