@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "Proyek chatbot AI dengan Node.js",
   "type": "module",
-  "main": "index.js",
+  "main": "index.mjs",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node index.mjs",
+    "dev": "nodemon index.mjs"
   },
   "keywords": ["chatbot", "ai", "nodejs", "express"],
   "author": "Tes Dulu ygy",
